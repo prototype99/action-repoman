@@ -23,6 +23,6 @@ END
 [[ -z "${GITHUB_WORKSPACE}" ]] && die "Must set GITHUB_WORKSPACE in env"
 cd "${GITHUB_WORKSPACE}" || die "GITHUB_WORKSPACE does not exist"
 
-PORTDIR_OVERLAY="." repoman --straight-to-stable -dx full || die "Repoman failed"
+PORTDIR_OVERLAY="." repoman manifest || die "Repoman failed"
 
 echo "------------------------------------------------------------------------------------------------------------------------"
