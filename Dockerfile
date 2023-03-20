@@ -16,7 +16,7 @@ RUN echo 'PORTAGE_IONICE_COMMAND="ionice -c 3 -p \${PID}"' >> /etc/portage/make.
 RUN mkdir -p '/etc/portage/package.mask'
 
 RUN emerge -v sys-apps/portage
-RUN emerge -v app-portage/repoman
+RUN emerge -v dev-util/pkgdev
 RUN emerge -v dev-vcs/git
 
 COPY entrypoint.sh /entrypoint.sh
