@@ -11,4 +11,4 @@ function die()
 [[ -z "${GITHUB_WORKSPACE}" ]] && die "Must set GITHUB_WORKSPACE in env"
 cd "${GITHUB_WORKSPACE}" || die "GITHUB_WORKSPACE does not exist"
 
-PORTDIR_OVERLAY="." pkgdev manifest -f --ignore-fetch-restricted || die "pkgdev manifest failed"
+PORTDIR_OVERLAY="." pkgdev manifest --ignore-fetch-restricted || die "pkgdev manifest failed"
